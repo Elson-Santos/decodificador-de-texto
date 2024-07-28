@@ -1,0 +1,359 @@
+:root {
+	--color-blue: #0A3871;
+	--color-grey: #495057;
+	--color-greyDark: #343A40;
+	--color-lightBlue: #F3F5FC;
+	--color-lightBlue2: #D8DFE8;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1px;
+	line-height: 1.3;
+	font-family: 'Inter', sans-serif;
+	text-decoration: none;
+}
+
+body {
+	background: var(--color-lightBlue);
+}
+
+button {
+	cursor: pointer;
+}
+
+/* Barra Scroll */
+*::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+	width: 8px;
+	background: none;
+}
+
+*::-webkit-scrollbar:horizontal {
+	height: 5px;
+	background: none;
+	border-radius: 100px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--color-blue);
+	border-radius: 20px;
+}
+
+*::-webkit-scrollbar-track {
+	border-radius: 500px;
+}
+
+/* Header */
+header {
+	width: 100%;
+}
+
+.container__header {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	height: 80px;
+}
+
+.header {
+	width: 90%;
+	height: auto;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	gap: .5em;
+}
+
+.logo {
+	max-height: 45px;
+	height: 100%;
+	min-height: 40px;
+}
+
+/* Main Container */
+.container {
+	margin: auto 40px auto auto;
+	width: 90%;
+	min-height: calc(100vh - 80px - 56px);
+	display: grid;
+	padding: 1rem;
+	grid-template-columns: 2.5fr 1fr;
+	gap: 1rem;
+}
+
+/* Left Section */
+.left {
+	width: 100%;
+	height: 92%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.inputtextarea {
+	width: 100%;
+	max-height: 350px;
+	min-height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	resize: none;
+	font-size: 32px;
+	color: var(--color-blue);
+	font-family: 'Inter', sans-serif;
+	margin-left: 15%;
+}
+
+textarea::placeholder {
+	color: var(--color-blue);
+}
+
+.conteiner__tecla {
+	min-height: 80px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	opacity: 1;
+}
+
+.info {
+	width: 100%;
+	height: auto;
+	gap: 8px;
+	opacity: 1;
+	margin-left: 15%;
+}
+
+.tecla {
+	display: flex;
+	justify-content: space-evenly;
+	padding: .8rem;
+	flex-wrap: wrap;
+	gap: .8rem;
+}
+
+.tecla__encriptar,
+.tecla__desencriptar,
+.tecla__copiar {
+	width: 45%; /* Todos têm a mesma largura */
+	max-width: 328px; /* Todos têm a mesma largura máxima */
+	min-width: 160px; /* Todos têm a mesma largura mínima */
+	height: 67px; /* Todos têm a mesma altura */
+	font-size: 16px; /* Todos têm o mesmo tamanho de fonte */
+	font-weight: bold; /* Todos têm o mesmo peso da fonte */
+	border-radius: 24px; /* Todos têm o mesmo raio de borda */
+	border: none; /* Todos têm a mesma borda */
+	outline: 1px solid var(--color-blue); /* Todos têm o mesmo contorno */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tecla__encriptar {
+	background:linear-gradient(to Right, rgb(26, 26, 117), rgb(21, 253, 253));
+	color: white;
+}
+
+.tecla__desencriptar {
+	background: linear-gradient(to Right,rgb(21, 253, 253),rgb(26, 26, 117));
+	color: white;
+}
+
+.tecla__copiar {
+	background: var(--color-lightBlue2); /* Igual ao "Desencriptar" */
+	color: var(--color-blue); /* Igual ao "Desencriptar" */
+}
+
+.tecla__encriptar:hover{  /*Efeito ao redor do botao*/
+	animation-name: botao;
+	animation-duration: 0.9s;
+	animation-iteration-count: infinite;
+	animation-duration: alternate;
+	animation-timing-function: ease-in-out;
+	box-shadow: 0 0 50px 20px rgba(21, 253, 253, 0.5);
+
+}
+
+.tecla__desencriptar:hover{   /*Efeito ao redor do botao*/
+	animation-name: botao;
+	animation-duration: 0.9s;
+	animation-iteration-count: infinite;
+	animation-duration: alternate;
+	animation-timing-function: ease-in-out;
+	box-shadow: 0 0 50px 20px rgb(26, 26, 117, 0.5);
+
+}
+
+/* Classes para ocultar elementos */
+.ocultar {
+	display: none;
+}
+
+.bn_ocultar {
+	display: none;
+}
+
+/* Right Section */
+.right {
+	align-items: center;
+	width: 100%;
+	height: calc(100% + 60px);
+	background: white;
+	border-radius: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 16px;
+	gap: 8px; /* Reduzir o gap para aproximar os elementos */
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.cadeado {
+	min-width: 230px;
+	width: 50%;
+	margin-top: -310px;
+}
+
+.textoFinal {
+	width: 100%;
+	font-size: 24px;
+	color: var(--color-greyDark);
+	border: none;
+	outline: none;
+	text-align: center;
+	overflow: hidden;
+	resize: none;
+	pointer-events: none;
+	font-family: 'Inter', sans-serif;
+	min-height: 400px; /* Aumentar a altura mínima */
+	max-height: 800px; /* Aumentar a altura máxima */
+}
+
+.textoFinal::placeholder {
+	color: var(--color-greyDark);
+}
+
+#textoInfo {
+	margin-top: -310px; /* Ajustar a margem superior para subir mais o texto */
+	margin-bottom: 0; /* Remover a margem inferior */
+	text-align: center;
+}
+
+/* Footer */
+footer {
+	width: 100%;
+	padding: 0.5rem 0; /* Reduzir o padding */
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	background: none; /* Remover a cor de fundo */
+}
+
+.container__footer {
+	width: 90%;
+	margin: auto;
+}
+
+.container__footer p {
+	font-size: 12px; /* Tamanho de fonte menor */
+	color: var(--color-greyDark);
+}
+
+.container__footer a {
+	color: var(--color-blue);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12px; /* Tamanho de fonte menor */
+}
+
+.container__footer a:hover {
+	text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 840px) {
+	.container {
+			grid-template-columns: 1fr;
+			grid-template-rows: 65% auto;
+			margin: auto;
+	}
+
+	.inputtextarea {
+			max-height: 270px;
+			font-size: 26px;
+	}
+
+	.info {
+			font-size: 12px;
+	}
+
+	.right {
+			height: 100%;
+	}
+
+	.cadeado {
+			display: none;
+	}
+
+	.textoFinal {
+			font-size: 18px;
+			min-height: 350px; /* Ajuste para telas menores */
+			max-height: 700px; /* Ajuste para telas menores */
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.tecla__encriptar,
+	.tecla__desencriptar,
+	.tecla__copiar {
+			width: 100%;
+			height: 50px;
+			border-radius: 19px;
+			font-size: 14px;
+	}
+
+	.inputtextarea {
+			max-height: 200px;
+			font-size: 20px;
+	}
+
+	.info {
+			font-size: 10px;
+	}
+
+	.textoFinal {
+			font-size: 16px;
+			min-height: 300px; /* Ajuste para telas menores */
+			max-height: 600px; /* Ajuste para telas menores */
+	}
+}
+
+@media screen and (max-width: 230px) {
+	.tecla__encriptar,
+	.tecla__desencriptar,
+	.tecla__copiar {
+			width: 100%;
+			min-width: 100%;
+			height: 40px;
+			border-radius: 15px;
+			font-size: 12px;
+	}
+	
+}
+
+@keyframes botao{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.05);
+	}
+}
+

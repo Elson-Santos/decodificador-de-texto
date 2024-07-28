@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">  
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="container__header">
+            <div class="header">
+                <img class="logo" src="assets/Logo.png">
+            </div>  
+        </div>
+    </header>
+    <main>
+        <article class="container">
+            <section class="left" id="left">
+                <textarea class="inputtextarea" id="textoInput" placeholder="Digite seu texto" autofocus></textarea>
+                <div class="conteiner__tecla">
+                    <span class="info">
+                        <img src="assets/Frame 1.png" alt="advertencia" />
+                    </span>
+                    <div class="tecla">
+                        <button id="tecla__encriptar" class="tecla__encriptar">Criptografar</button>
+                        <button id="tecla__desencriptar" class="tecla__desencriptar">Descriptografar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="right" id="rigth">
+                <img id="cadeado" class="cadeado" src="assets/ponta.gif" alt="personagem">
+                <textarea id="textoFinal" class="textoFinal" placeholder="Nenhuma mensagem encontrada"></textarea>
+                <p id="textoInfo" class="info">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <button class="tecla__copiar bn_ocultar" id="tecla__copiar">Copiar</button>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="container__footer">
+            <p>Desenvolvido por <a href="https://github.com/Elson-Santos" target="_blank">Elson Santos</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
